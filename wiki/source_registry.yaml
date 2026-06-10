@@ -1,0 +1,27 @@
+# Source registry — the allowlist of CITABLE sources, and the single source of truth for which
+# external hosts the agent may reach. Kept in lockstep with the OpenShell egress policy by
+# tools/registry_to_policy.py (OPENSHELL.md §6). Register a source BEFORE fetching it (AGENTS.md §5).
+#
+# Trust tiers: A = arXiv/peer-reviewed · B = established blog/news · C = Reddit/X (proxy-only, must
+# point to a tier-A/B link a user provided).
+#
+# This seed is intentionally empty; the agent grows it on each ingest. Schema (one entry per ref):
+#
+# ref_1:
+#   url: "https://arxiv.org/abs/2304.xxxxx"
+#   type: paper                 # paper | article | docs | dataset | post
+#   trust_tier: A               # A | B | C
+#   first_fetched: 2026-06-09T00:00:00-03:00
+#   last_fetched: 2026-06-09T00:00:00-03:00
+#   status: ok                  # ok | rotten
+#   raw_snapshot: raw/arxiv_2304_xxxxx.md
+#
+# Optional: add `watch: true` to an entry to have tools/watcher.py monitor it for changes.
+#
+# Flat ref_N keys at the top level; the agent grows this on each ingest. Operator-seeded the first
+# source below to enable the first ingest (its host arxiv.org becomes the egress policy via
+# tools/registry_to_policy.py). The agent fills last_fetched/status/raw_snapshot when it ingests.
+ref_1:
+  url: "https://arxiv.org/abs/2210.03629"   # ReAct: Synergizing Reasoning and Acting in Language Models
+  type: paper
+  trust_tier: A

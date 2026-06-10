@@ -1,0 +1,28 @@
+# PR gate: MkDocs build (strict = fails on broken internal links/warnings) + advisory link check.
+# This is the required status check that `automerge` waits on (protect `main` to require it).
+name: build
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material
+      - name: Build (strict)
+        run: mkdocs build --strict
+      - name: Link check (advisory)
+        uses: lycheeverse/lychee-action@v2
+        continue-on-error: true
+        with:
+          args: --no-progress "./wiki/**/*.md"

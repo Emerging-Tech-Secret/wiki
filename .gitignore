@@ -1,0 +1,7 @@
+# Wiki repo: only Markdown pages (+ schema/config) are tracked. Everything below lives in S3
+# or is build output — never in Git (AGENTS.md §1).
+raw/
+artifacts/
+state/
+site/
+.env

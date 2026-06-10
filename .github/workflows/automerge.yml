@@ -1,0 +1,25 @@
+# Auto-merge agent PRs once required checks pass.
+# One-time repo setup:
+#   - Settings → General → Pull Requests → enable "Allow auto-merge"
+#   - Settings → Branches → protect `main`, require the "build" status check
+# With those on, this enables auto-merge; GitHub merges the PR automatically when `build` is green.
+name: automerge
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enable-automerge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    steps:
+      - name: Enable auto-merge (squash)
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}

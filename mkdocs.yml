@@ -1,0 +1,43 @@
+# MkDocs Material config for the Content Cruncher wiki (published to GitHub Pages).
+# This file sits at the wiki-repo ROOT (alongside AGENTS.md); pages live in wiki/ (docs_dir).
+site_name: Content Cruncher Wiki
+site_description: A self-evolving, citation-grounded wiki maintained by a Hermes agent.
+
+docs_dir: wiki
+
+# Keep data/working files out of the published site (registry is repo-only).
+exclude_docs: |
+  *.yaml
+  source_registry.yaml
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
