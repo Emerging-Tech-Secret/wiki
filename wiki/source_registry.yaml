@@ -25,3 +25,7 @@ ref_1:
   url: "https://arxiv.org/abs/2210.03629"   # ReAct: Synergizing Reasoning and Acting in Language Models
   type: paper
   trust_tier: A
+  first_fetched: 2026-06-10T12:00:00-03:00
+  last_fetched: 2026-06-10T12:00:00-03:00
+  status: ok
+  raw_snapshot: raw/arxiv_2210_03629.md

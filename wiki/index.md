@@ -12,10 +12,10 @@ agent. Every claim cites an **external** source; the agent writes and maintains 
 _None yet._
 
 ## Concepts
-_None yet._
+- [ReAct (reasoning and acting)](react.md) - interleaving reasoning traces and actions in LLMs - 1 source - updated 2026-06-10
 
 ## Sources
-_None yet._
+- [ReAct: Synergizing Reasoning and Acting in Language Models](sources/react-2210-03629.md) - Yao et al., arXiv:2210.03629 (ref_1)
 
 ## Syntheses
 _None yet._
