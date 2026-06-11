@@ -8,3 +8,6 @@ Seeded `index.md`, `log.md`, and `source_registry.yaml`. No pages yet — awaiti
 
 ## [2026-06-10] ingest | "ReAct" (ref_1) [reproduction on fresh-booted instance]
 Fetched+snapshotted arxiv.org/abs/2210.03629. Pages: wiki/react.md, wiki/sources/react-2210-03629.md.
+
+## [2026-06-10] ingest | "Dive into Claude Code" (ref_2)
+Fetched+snapshotted arxiv.org/html/2604.14228v1. Pages: wiki/sources/dive-into-claude-code-2604-14228v1.md, wiki/claude-code.md, wiki/openclaw.md, wiki/ai-agent-system-design.md, wiki/agentic-coding-tools.md.

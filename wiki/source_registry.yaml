@@ -29,3 +29,12 @@ ref_1:
   last_fetched: 2026-06-10T12:00:00-03:00
   status: ok
   raw_snapshot: raw/arxiv_2210_03629.md
+
+ref_2:
+  url: "https://arxiv.org/html/2604.14228v1"   # Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems
+  type: paper
+  trust_tier: A
+  first_fetched: 2026-06-10T23:32:38-03:00
+  last_fetched: 2026-06-10T23:32:38-03:00
+  status: ok
+  raw_snapshot: raw/arxiv_2604_14228v1.md
