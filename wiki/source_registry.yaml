@@ -38,3 +38,12 @@ ref_2:
   last_fetched: 2026-06-10T23:32:38-03:00
   status: ok
   raw_snapshot: raw/arxiv_2604_14228v1.md
+
+ref_3:
+  url: "https://arxiv.org/html/2502.15840v1"   # Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents
+  type: paper
+  trust_tier: A
+  first_fetched: 2026-06-11T17:48:33+00:00
+  last_fetched: 2026-06-11T17:48:33+00:00
+  status: ok
+  raw_snapshot: raw/arxiv_2502_15840v1.md
